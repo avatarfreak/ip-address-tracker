@@ -24,7 +24,30 @@
   --clr-100: hsl(0, 0%, 17%);
   --clr-110: hsl(0, 0%, 59%);
 }
+
 @media (min-width: 48rem) {
+  :root {
+    /* font size */
+    --fs-700: 2rem;
+    --fs-600: 1.124rem;
+    --fs-500: 0.75rem;
+    --fs-400: 1.25rem;
+    --fs-300: 1.25rem;
+    --fs-200: 1.25rem;
+    --fs-100: 1.25rem;
+
+    /* letter-spacing */
+    --space-700: -0.55;
+    --space-600: 0.12px;
+    --space-500: 1.7px;
+    --space-400: 0.4px;
+    --space-300: 0.4px;
+    --space-200: 0.4px;
+    --space-100: 0.4px;
+  }
+}
+
+@media (min-width: 64rem) {
   :root {
     /* font size */
     --fs-700: 2rem;
@@ -41,7 +64,7 @@
     --space-500: 1.7px;
     --space-400: 0.4px;
     --space-300: 0.4px;
-    --space-200: 0.4kpx;
+    --space-200: 0.4px;
     --space-100: 0.4px;
   }
 }
