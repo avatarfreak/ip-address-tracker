@@ -1,19 +1,25 @@
-import dynamic, { DynamicOptions } from "next/dynamic";
+import dynamic from "next/dynamic";
 import React from "react";
 
 const Home = () => {
-  const Map = React.useMemo(
+  const [center] = React.useState({ lat: 0, lng: 0 });
+
+  const MapViewer = React.useMemo(
     () =>
-      dynamic(() => import("@components/map") as any, {
-        loading: () => <p>Loading...</p>,
+      dynamic(() => import("@components/map"), {
+        loading: () => (
+          <p className="text-center font-bold text-3xl text-indigo-500">
+            Loading...
+          </p>
+        ),
         ssr: false,
       }),
     []
   );
 
   return (
-    <main className="">
-      <Map />
+    <main>
+      <MapViewer location={center} />
     </main>
   );
 };
